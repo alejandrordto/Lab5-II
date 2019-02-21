@@ -9,6 +9,14 @@ package edu.eci.arsw.cinema.filters;
  *
  * @author user
  */
-public class filterException {
+public class filterException extends Exception{
+
+    public filterException(String message) {
+        super(message);
+    }
+
+    public filterException(String message, Throwable cause) {
+        super(message, cause);
+    } 
     
 }

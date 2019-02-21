@@ -15,7 +15,7 @@ import java.util.List;
  */
 public interface filter {
     
-    public List<Movie> filtro ( Cinema cinema, String date ,String parametro);
+    public List<Movie> filtro ( Cinema cinema, String date ,String parametro) throws filterException;
         
    
 

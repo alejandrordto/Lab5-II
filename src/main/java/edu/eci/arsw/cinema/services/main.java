@@ -1,5 +1,6 @@
 package edu.eci.arsw.cinema.services;
 
+import edu.eci.arsw.cinema.filters.filterException;
 import edu.eci.arsw.cinema.model.Cinema;
 import edu.eci.arsw.cinema.model.CinemaFunction;
 import edu.eci.arsw.cinema.model.Movie;
@@ -17,7 +18,7 @@ public class main {
      *
      * @author Alejandro Rodriguez
      */
-    public static void main(String[] args) throws CinemaException, CinemaPersistenceException {
+    public static void main(String[] args) throws CinemaException, CinemaPersistenceException, filterException {
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         CinemaServices c = ac.getBean(CinemaServices.class);
           String functionDate = "2018-12-18 15:30";

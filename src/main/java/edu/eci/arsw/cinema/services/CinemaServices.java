@@ -6,6 +6,7 @@
 package edu.eci.arsw.cinema.services;
 
 import edu.eci.arsw.cinema.filters.filter;
+import edu.eci.arsw.cinema.filters.filterException;
 import edu.eci.arsw.cinema.model.Cinema;
 import edu.eci.arsw.cinema.model.CinemaFunction;
 import edu.eci.arsw.cinema.model.Movie;
@@ -48,7 +49,7 @@ public class CinemaServices {
         }
     }
     
-    public List<Movie> busqueda(Cinema cinema, String date, String parametro){
+    public List<Movie> busqueda(Cinema cinema, String date, String parametro) throws filterException{
         List<Movie> flag=null;
         flag=filr.filtro(cinema, date, parametro);
         return flag;

@@ -24,7 +24,7 @@ public class filteringByGender implements filter {
     
 
     @Override
-    public List<Movie> filtro(Cinema cinema, String date, String parametro) {
+    public List<Movie> filtro(Cinema cinema, String date, String parametro)  throws filterException {
         List<Movie> pelis = new ArrayList();
         List<CinemaFunction> functions = cinema.getFunctions();
         for (CinemaFunction i : functions) {

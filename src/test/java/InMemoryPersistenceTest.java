@@ -127,4 +127,6 @@ public class InMemoryPersistenceTest {
         
         assertEquals("Its not the same functions",ipct.getFunctionsbyCinemaAndDate("cinemaXD", functionDate),c.getFunctions());
     }
+     
+    
 }
