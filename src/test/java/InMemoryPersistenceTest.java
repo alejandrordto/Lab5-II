@@ -11,6 +11,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.fail;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -23,7 +24,7 @@ import org.junit.Test;
  * @author cristian
  */
 public class InMemoryPersistenceTest {
-
+    
     @Test
     public void saveNewAndLoadTest() throws CinemaPersistenceException{
         InMemoryCinemaPersistence ipct=new InMemoryCinemaPersistence();

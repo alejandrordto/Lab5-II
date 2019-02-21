@@ -12,6 +12,8 @@ import edu.eci.arsw.cinema.persistence.CinemaPersistenceException;
 import edu.eci.arsw.cinema.persistence.CinemaPersitence;
 import java.util.List;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,11 +27,15 @@ public class CinemaServices {
     CinemaPersitence cps=null;
     
     public void addNewCinema(Cinema c){
-        
+        try {
+            cps.saveCinema(c);
+        } catch (CinemaPersistenceException ex) {
+            Logger.getLogger(CinemaServices.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     public Set<Cinema> getAllCinemas(){
-        return null;
+        return cps.getAllCinemas();
     }
     
     /**
@@ -49,6 +55,10 @@ public class CinemaServices {
     
     public List<CinemaFunction> getFunctionsbyCinemaAndDate(String cinema, String date) {
         return cps.getFunctionsbyCinemaAndDate(cinema, date);
+    }
+
+    public void setCps(CinemaPersitence cps) {
+        this.cps = cps;
     }
 
 

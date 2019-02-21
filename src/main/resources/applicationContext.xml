@@ -8,5 +8,7 @@
 ">
 
     <context:component-scan base-package="edu.eci.arsw" />
+    <bean id="cinemaServices" class="edu.eci.arsw.cinema.services.CinemaServices">
+    </bean>
     
 </beans>
