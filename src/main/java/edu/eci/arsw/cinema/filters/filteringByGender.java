@@ -25,7 +25,6 @@ public class filteringByGender implements filter {
     public List<Movie> filtro(Cinema cinema, String date, String parametro) {
         List<Movie> pelis = new ArrayList();
         List<CinemaFunction> functions = cinema.getFunctions();
-        int dispo = Integer.parseInt(parametro);
         for (CinemaFunction i : functions) {
             if (i.getMovie().getGenre().equals(parametro) ) {
                 pelis.add(i.getMovie());

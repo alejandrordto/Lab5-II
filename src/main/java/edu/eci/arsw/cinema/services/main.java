@@ -30,6 +30,7 @@ public class main {
         c.addNewCinema(cine);
         
         System.out.println(c.getAllCinemas().contains(cine));
+        System.out.println(c.busqueda(cine, functionDate, "Horror").size());
 
     }
 

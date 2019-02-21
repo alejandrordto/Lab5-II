@@ -48,9 +48,9 @@ public class CinemaServices {
         }
     }
     
-    public List<Movie> busqueda(){
+    public List<Movie> busqueda(Cinema cinema, String date, String parametro){
         List<Movie> flag=null;
-        //flag=filr.filtro();
+        flag=filr.filtro(cinema, date, parametro);
         return flag;
     }
     
