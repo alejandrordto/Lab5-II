@@ -27,6 +27,7 @@ import org.springframework.stereotype.Service;
 public class CinemaServices {
     @Autowired
     CinemaPersitence cps=null;
+
     filter filr=null;
 
     public filter getFilr() {
@@ -38,6 +39,7 @@ public class CinemaServices {
         this.filr = filr;
     }
     
+
     public void addNewCinema(Cinema c){
         try {
             cps.saveCinema(c);
