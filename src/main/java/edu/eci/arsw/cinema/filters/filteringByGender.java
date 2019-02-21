@@ -11,12 +11,14 @@ import edu.eci.arsw.cinema.model.Movie;
 import java.util.ArrayList;
 
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Alejandro y jonathan
  */
 
+@Service
 public class filteringByGender implements filter {
 
     

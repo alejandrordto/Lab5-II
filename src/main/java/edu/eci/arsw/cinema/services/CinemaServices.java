@@ -27,7 +27,7 @@ import org.springframework.stereotype.Service;
 public class CinemaServices {
     @Autowired
     CinemaPersitence cps=null;
-
+    @Autowired
     filter filr=null;
 
     public filter getFilr() {
