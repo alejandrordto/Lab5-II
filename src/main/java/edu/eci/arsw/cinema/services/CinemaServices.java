@@ -5,6 +5,7 @@
  */
 package edu.eci.arsw.cinema.services;
 
+import edu.eci.arsw.cinema.filters.filter;
 import edu.eci.arsw.cinema.model.Cinema;
 import edu.eci.arsw.cinema.model.CinemaFunction;
 import edu.eci.arsw.cinema.persistence.CinemaException;
@@ -25,7 +26,7 @@ import org.springframework.stereotype.Service;
 public class CinemaServices {
     @Autowired
     CinemaPersitence cps=null;
-    
+    filter fs=null;
     public void addNewCinema(Cinema c){
         try {
             cps.saveCinema(c);

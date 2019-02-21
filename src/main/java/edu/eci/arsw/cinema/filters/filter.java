@@ -5,6 +5,8 @@
  */
 package edu.eci.arsw.cinema.filters;
 
+import edu.eci.arsw.cinema.model.Cinema;
+import edu.eci.arsw.cinema.model.Movie;
 import java.util.List;
 
 /**
@@ -13,7 +15,7 @@ import java.util.List;
  */
 public interface filter {
     
-    public List<Movie> busqueda ( String cinema, String date );
+    public List<Movie> filtro ( Cinema cinema, String date ,String parametro);
         
    
 
