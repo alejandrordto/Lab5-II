@@ -5,8 +5,10 @@
  */
 package edu.eci.arsw.cinema.services;
 
+import edu.eci.arsw.cinema.filters.filter;
 import edu.eci.arsw.cinema.model.Cinema;
 import edu.eci.arsw.cinema.model.CinemaFunction;
+import edu.eci.arsw.cinema.model.Movie;
 import edu.eci.arsw.cinema.persistence.CinemaException;
 import edu.eci.arsw.cinema.persistence.CinemaPersistenceException;
 import edu.eci.arsw.cinema.persistence.CinemaPersitence;
@@ -25,6 +27,16 @@ import org.springframework.stereotype.Service;
 public class CinemaServices {
     @Autowired
     CinemaPersitence cps=null;
+    filter filr=null;
+
+    public filter getFilr() {
+        return filr;
+    }
+    
+    
+    public void setFilr(filter filr) {
+        this.filr = filr;
+    }
     
     public void addNewCinema(Cinema c){
         try {
@@ -32,6 +44,12 @@ public class CinemaServices {
         } catch (CinemaPersistenceException ex) {
             Logger.getLogger(CinemaServices.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    public List<Movie> busqueda(){
+        List<Movie> flag=null;
+        //flag=filr.filtro();
+        return flag;
     }
     
     public Set<Cinema> getAllCinemas(){

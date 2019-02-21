@@ -5,6 +5,7 @@
  */
 package edu.eci.arsw.cinema.filters;
 
+import edu.eci.arsw.cinema.model.Movie;
 import java.util.List;
 
 /**
