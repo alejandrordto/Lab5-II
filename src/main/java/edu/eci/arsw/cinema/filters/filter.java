@@ -5,15 +5,16 @@
  */
 package edu.eci.arsw.cinema.filters;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
- * @author Alejandro y jonathan
+ * @author user
  */
-public class filteringByAvailability {
-   
+public interface filter {
     
+    public List<Movie> busqueda ( String cinema, String date );
+        
+   
 
 }
